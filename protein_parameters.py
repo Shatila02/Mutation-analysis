@@ -1,0 +1,11 @@
+from Bio.SeqUtils.ProtParam import ProteinAnalysis
+X = ProteinAnalysis("MAEGEITTFTALTEKFNLPPGNYKKPKLLYCSNGGHFLRILPDGTVDGTRDRSDQHIQLQLSAESVGEVYIKSTETGQYLAMDTSGLLYGSQTPSEECLFLERLEENHYNTYTSKKHAEKNWFVGLKKNGSCKRGPRTHYGQKAILF")
+print("%0.2f" % X.molecular_weight())
+print("%0.2f" % X.aromaticity())
+print("%0.2f" % X.instability_index())
+print("%0.2f" % X.isoelectric_point())
+sec_struc = X.secondary_structure_fraction()
+print("%0.2f" % sec_struc[0])
+epsilon_prot = X.molar_extinction_coefficient() 
+print(epsilon_prot[0])
+print(epsilon_prot[1])
